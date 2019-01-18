@@ -5,9 +5,7 @@ in the context of PRINTING on the CONSOLE.
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
          their colleagues and Zichen Tan.
 """  # dONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
-# I have already went through the following tests.
-# No offense to anyone, the following test are very easy, so doing them  is just kind of waste of time
-# So I will pass m3 and m4, and finish the m6
+
 def main():
     """ Calls the other functions to test them. """
     run_test_rectangle_of_stars()
@@ -62,7 +60,10 @@ def rectangle_of_stars(r, c):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for i in range(r):
+        for j in range(c):
+            print("*", end= "")
+        print()
 
 def run_test_triangle_of_stars():
     """ Tests the    triangle_of_stars    function. """
@@ -117,7 +118,10 @@ def triangle_of_stars(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for i in range(r+1):
+        for j in range(i):
+            print("*", end="")
+        print()
 
 def run_test_decreasing_exclamation_marks():
     """ Tests the    decreasing_exclamation_marks    function. """
@@ -159,7 +163,10 @@ def decreasing_exclamation_marks(m, n):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for i in range(m,n-1,-1):
+        for j in range(i):
+            print('!', end = "")
+        print()
 
 def run_test_alternating_brackets():
     """ Tests the    alternating_brackets    function. """
@@ -201,7 +208,13 @@ def alternating_brackets(m, n):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for i in range(m,n-1,-1):
+        for j in range(i):
+            if (j%2==0):
+                print('[', end = "")
+            else:
+                print(']', end = "")
+        print()
 
 def run_test_triangle_same_number_in_each_row():
     """ Tests the    triangle_same_number_in_each_row    function. """
@@ -244,7 +257,10 @@ def triangle_same_number_in_each_row(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for i in range(r+1):
+        for j in range(i):
+            print(i, end="")
+        print()
 
 def run_test_triangle_all_numbers_in_each_row():
     """ Tests the    triangle_all_numbers_in_each_row    function. """
@@ -287,7 +303,10 @@ def triangle_all_numbers_in_each_row(r):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for i in range(r+1):
+        for j in range(i):
+            print(j+1, end="")
+        print()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
